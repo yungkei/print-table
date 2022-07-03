@@ -1,0 +1,18 @@
+.yk-print {}
+
+.yk-print table {
+    border: 1px;
+    border-style: solid;
+    border-collapse: collapse;
+}
+
+.yk-print table th {
+    border: 1px;
+    border-style: solid;
+    height: 10px;
+}
+
+.yk-print table td {
+    border: 1px;
+    border-style: solid;
+}

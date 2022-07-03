@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="../dist/print-table.js"></script>
+    <script type="text/javascript">
+        function printDemo() {
+            printTable('basic',
+                {
+                    name: "userA",
+                    age: 20,
+                    columns: [
+                        [
+                            { content: "name" },
+                            { content: "age" },
+                            { content: "address" }
+                        ]
+                    ],
+                    datasource: [
+                        [
+                            { content: 'user' },
+                            { content: 30 },
+                            { content: 'address' }
+                        ]
+                    ]
+                }
+            )
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="printDemo()">printDemo</button>
+</body>

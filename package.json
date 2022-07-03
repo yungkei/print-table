@@ -1,0 +1,37 @@
+{
+  "name": "print-table",
+  "version": "1.0.0",
+  "description": "A tiny javascript library to help printing table from the web.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development --progress --devtool source-map",
+    "watch": "webpack --mode development --watch --progress",
+    "production": "webpack --mode production --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yungkei/print-table.git"
+  },
+  "author": "yungkei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yungkei/print-table/issues"
+  },
+  "homepage": "https://github.com/yungkei/print-table#readme",
+  "dependencies": {
+    "@babel/core": "^7.18.2",
+    "art-template": "^4.13.2",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "raw-loader": "^4.0.2",
+    "style-loader": "^3.3.1",
+    "uuid": "^8.3.2",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
+}

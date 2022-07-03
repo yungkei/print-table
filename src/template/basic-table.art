@@ -1,0 +1,22 @@
+<div class = "yk-print">
+    <table>
+        {{each columns}}
+            <tr>
+                {{each $value}}
+                    {{if $value != null}}
+                        <th>{{$value.content}}</th>
+                    {{/if}}
+                {{/each}}
+            </tr>
+        {{/each}}
+        {{each datasource}}
+            <tr>
+                {{each $value}}
+                    {{if $value != null}}
+                        <td>{{$value.content}}</td>
+                    {{/if}}
+                {{/each}}
+            </tr>
+        {{/each}}
+    </table>
+</div>
