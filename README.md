@@ -22,6 +22,80 @@ Import the library into your project:
 import printTable from 'print-table'
 ```
 
+## Usage
+```js
+import printTable from 'print-table'
+
+printTable('basic',
+    {
+        columns: [
+            [
+                { content: "name" },
+                { content: "age" },
+                { content: "address" }
+            ]
+        ],
+        datasource: [
+            [
+                { content: 'user' },
+                { content: 30 },
+                { content: 'address' }
+            ],
+            [
+                { content: 'user' },
+                { content: 30 },
+                { content: 'address' }
+            ],
+            [
+                { content: 'user' },
+                { content: 30 },
+                { content: 'address' }
+            ],
+        ],
+        paper: 'a4',
+        orientation:'portrait'
+    }
+)
+```
+or
+```js
+import printTable from 'print-table'
+
+printTable('basic',
+    {
+        columns: [
+            [
+                { content: "name" },
+                { content: "age" },
+                { content: "address" }
+            ]
+        ],
+        datasource: [
+            [
+                { content: 'user' },
+                { content: 30 },
+                { content: 'address' }
+            ],
+            [
+                { content: 'user' },
+                { content: 30 },
+                { content: 'address' }
+            ],
+            [
+                { content: 'user' },
+                { content: 30 },
+                { content: 'address' }
+            ]
+        ]
+    }
+)
+```
+Tips:
+- columns: table head data
+- datasource: table body data
+- paper: print size, support: a1,a2,a3,a4,a5, default: "a4"
+- orientation: print orientation, support: portrait,landscape, default: "portrait";
+
 ## License
 
 Print.js is available under the [MIT license].

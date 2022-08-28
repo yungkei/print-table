@@ -2,8 +2,8 @@ import Template from './template';
 import { v4 as uuidv4 } from 'uuid';
 
 const Print = {
-    print: (template, data, paper) => {
-        const preparePrinthtml = Template.load(template, data, paper);
+    print: (template, data, paper, orientation) => {
+        const preparePrinthtml = Template.load(template, data, paper, orientation);
         const orderTagId = createOrderTag();
         const orderTag = getOrderTag(orderTagId);
 

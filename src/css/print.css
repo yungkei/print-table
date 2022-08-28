@@ -1,4 +1,6 @@
-.yk-print {}
+.yk-print {
+    page-break-after: always;
+}
 
 .yk-print table {
     border: 1px;
