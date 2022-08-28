@@ -42,10 +42,19 @@ function renderHtml(template, data, paper, orientation) {
     if (rows <= columnsRows) {
         console.error("ERROR|LODD_DATA_ERROR|COLUMN_ROWS_IS_NOT_EXPECTED");
     }
+    const datasourceRowsEachPage = rows - columnsRows;
     const datasourceRows = getDatasourceRows(data);
-    var rHtml = "";
+    let rHtml = "";
     try {
-        rHtml = artTemplate.render(template, data);
+        const { columns = [], datasource = [] } = data;
+        for (let index = 0; index < datasourceRows; index += datasourceRowsEachPage) {
+            const element = {
+                ...data,
+                columns,
+                datasource: datasource.slice(index, index + datasourceRowsEachPage + 1)
+            };
+            rHtml += artTemplate.render(template, element);
+        }
     } catch (error) {
         console.error("ERROR|LODD_DATA_ERROR", error);
     }
@@ -99,7 +108,7 @@ function getDatasourceRows(data) {
 function getTotalRowsByPaperType(paper, orientation) {
     const paperLength = getPaperLength(paper);
     const paperWidth = getPaperWidth(paper);
-    return orientation === DEFAULT_ORIENTATION ? paperLength / CELL_WIDTH : paperWidth / CELL_WIDTH;
+    return orientation === DEFAULT_ORIENTATION ? Math.floor(paperLength / CELL_WIDTH) : Math.floor(paperWidth / CELL_WIDTH);
 }
 
 function getLibTpl(name) {
