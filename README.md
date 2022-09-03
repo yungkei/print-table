@@ -7,13 +7,13 @@ A tiny javascript library to help printing table from the web.
 To install via npm:
 
 ```bash
-npm install print-table --save
+npm install @yungkei/print-table --save
 ```
 
 To install via yarn:
 
 ```bash
-yarn add print-table
+yarn add @yungkei/print-table
 ```
 
 Import the library into your project:
