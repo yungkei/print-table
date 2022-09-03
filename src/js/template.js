@@ -14,20 +14,20 @@ const DEFAULT_ORIENTATION = "portrait";
 const CELL_LENGTH = 30;
 const CELL_WIDTH = 8;
 //A1 841mm*594mm
-const A1_LENGTH = 841;
-const A1_WIDTH = 594;
+const A1_LENGTH = 841 - 25.4 * 2;
+const A1_WIDTH = 594 - 31.8 * 2;
 //A2 594mm*420mm
-const A2_LENGTH = 594;
-const A2_WIDTH = 420;
+const A2_LENGTH = 594 - 25.4 * 2;
+const A2_WIDTH = 420 - 31.8 * 2;
 //A3 420mm*297mm
-const A3_LENGTH = 420;
-const A3_WIDTH = 297;
+const A3_LENGTH = 420 - 25.4 * 2;
+const A3_WIDTH = 297 - 31.8 * 2;
 //A4 297mm*210mm
-const A4_LENGTH = 297;
-const A4_WIDTH = 210;
+const A4_LENGTH = 297 - 25.4 * 2;
+const A4_WIDTH = 210 - 31.8 * 2;
 //A4 210mm*148mm
-const A5_LENGTH = 210;
-const A5_WIDTH = 148;
+const A5_LENGTH = 210 - 25.4 * 2;
+const A5_WIDTH = 148 - 31.8 * 2;
 
 const Template = {
     load: (template = DEFAULT_TEMPLATE, data = DEFAULT_DATA, paper = DEFAULT_PAPER, orientation = DEFAULT_ORIENTATION) => {
@@ -40,7 +40,7 @@ function renderHtml(template, data, paper, orientation) {
     const rows = getTotalRowsByPaperType(paper, orientation);
     const columnsRows = getColumnsRows(data);
     if (rows <= columnsRows) {
-        console.error("ERROR|LODD_DATA_ERROR|COLUMN_ROWS_IS_NOT_EXPECTED");
+        console.error("ERROR>>LODD_DATA_ERROR>>COLUMN_ROWS_IS_NOT_EXPECTED");
     }
     const datasourceRowsEachPage = rows - columnsRows;
     const datasourceRows = getDatasourceRows(data);
@@ -51,12 +51,14 @@ function renderHtml(template, data, paper, orientation) {
             const element = {
                 ...data,
                 columns,
-                datasource: datasource.slice(index, index + datasourceRowsEachPage + 1)
+                datasource: datasource.slice(index, index + datasourceRowsEachPage + 1),
+                paper,
+                orientation
             };
             rHtml += artTemplate.render(template, element);
         }
     } catch (error) {
-        console.error("ERROR|LODD_DATA_ERROR", error);
+        console.error("ERROR>>LODD_DATA_ERROR", error);
     }
     return rHtml;
 }

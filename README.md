@@ -19,12 +19,12 @@ yarn add print-table
 Import the library into your project:
 
 ```js
-import printTable from 'print-table'
+import printTable from '@yungkei/print-table'
 ```
 
 ## Usage
 ```js
-import printTable from 'print-table'
+import printTable from '@yungkei/print-table'
 
 printTable('basic',
     {

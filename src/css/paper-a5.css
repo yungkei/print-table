@@ -1,1 +1,4 @@
-.yk-print-paper-a5 {}
+.yk-print-paper-a5 {
+    size: a5;
+    margin: 25.4mm 31.8mm;
+}

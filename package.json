@@ -1,5 +1,5 @@
 {
-  "name": "print-table",
+  "name": "@yungkei/print-table",
   "version": "1.0.0",
   "description": "A tiny javascript library to help printing table from the web.",
   "main": "index.js",
@@ -16,6 +16,9 @@
     "type": "git",
     "url": "git+https://github.com/yungkei/print-table.git"
   },
+  "files": [
+    "dist"
+  ],
   "author": "yungkei",
   "license": "MIT",
   "bugs": {

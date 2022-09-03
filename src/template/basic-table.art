@@ -1,4 +1,14 @@
-<div class = "yk-print">
+<style>
+@page {
+    size: {{if orientation == 'portrait'}} portrait {{else if orientation == 'landscape'}} landscape {{/if}}">;
+}
+</style>
+<div class = "yk-print 
+{{if paper == 'a1'}} yk-print-paper-a1
+{{else if paper == 'a2'}} yk-print-paper-a2
+{{else if paper == 'a3'}} yk-print-paper-a3
+{{else if paper == 'a4'}} yk-print-paper-a4
+{{else if paper == 'a5'}} yk-print-paper-a5{{/if}}">
     <table>
         {{each columns}}
             <tr>

@@ -7,8 +7,8 @@ module.exports = {
         library: 'printTable',
         libraryTarget: 'umd',
         path: path.resolve(__dirname, 'dist'),
-        filename: 'print-table.js',
-        sourceMapFilename: 'print-table.map',
+        filename: 'yk-print-table.js',
+        sourceMapFilename: 'yk-print-table.map',
         libraryExport: 'default'
     },
     module: {

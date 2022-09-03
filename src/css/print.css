@@ -11,10 +11,15 @@
 .yk-print table th {
     border: 1px;
     border-style: solid;
-    height: 10px;
+    height: 8mm;
 }
 
 .yk-print table td {
     border: 1px;
     border-style: solid;
+    height: 8mm;
+}
+
+@page {
+    margin: 0;
 }
