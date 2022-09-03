@@ -121,4 +121,4 @@ printTable('basic',
 
 ## License
 
-Print.js is available under the [MIT license].
+print-table.js is available under the [MIT license].
