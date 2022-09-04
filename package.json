@@ -36,5 +36,9 @@
     "uuid": "^8.3.2",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2"
-  }
+  },
+  "keywords": [
+    "print-table",
+    "print-table.js"
+  ]
 }

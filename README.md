@@ -1,4 +1,6 @@
 # print-table
+[![Software License](https://img.shields.io/npm/l/@yungkei/print-table)](LICENSE)
+[![NPM](https://img.shields.io/npm/v/@yungkei/print-table)](https://www.npmjs.com/package/@yungkei/print-table)
 
 A tiny javascript library to help printing table from the web.
 
