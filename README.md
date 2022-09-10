@@ -41,6 +41,7 @@ printTable(TEMPLATE,DATA,PAPER,ORIENTATION)
   - type: {columns: [], datasource: []}
     - columns: table head data, 
     - datasource: table body data
+    - attributes: content, align, valign, width, colspan, style
   - default: {}
 - paper: 
   - description: paper size, 
@@ -50,6 +51,33 @@ printTable(TEMPLATE,DATA,PAPER,ORIENTATION)
   - description: print orientation, 
   - type: 'portrait'|'landscape'
   - default: 'portrait'
+
+### DATA STRUCT
+```javascript
+const DATA = {
+    columns: [
+        { 
+            content: "text",
+            align: "center",
+            valign: "top",
+            width: "200px",
+            colspan: 2,
+            style: "color:red"
+        }
+    ],
+    datasource: [
+        { 
+            content: "...",
+            align: "...",
+            valign: "...",
+            width: "...",
+            colspan: "...",
+            style: "..."
+        }
+    ]
+}
+
+```
 
 ## Example
 

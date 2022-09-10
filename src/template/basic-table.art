@@ -14,7 +14,15 @@
             <tr>
                 {{each $value}}
                     {{if $value != null}}
-                        <th>{{$value.content}}</th>
+                        <th 
+                            align="{{$value.align}}" 
+                            valign="{{$value.valign}}" 
+                            width="{{$value.width}}"
+                            colspan="{{$value.colspan}}"
+                            style = "{{$value.style}}"
+                        >
+                            {{$value.content}}
+                        </th>
                     {{/if}}
                 {{/each}}
             </tr>
@@ -23,7 +31,15 @@
             <tr>
                 {{each $value}}
                     {{if $value != null}}
-                        <td>{{$value.content}}</td>
+                        <td 
+                            align="{{$value.align}}" 
+                            valign="{{$value.valign}}" 
+                            width="{{$value.width}}"
+                            colspan="{{$value.colspan}}"
+                            style = "{{$value.style}}"
+                        >
+                            {{$value.content}}
+                        </td>
                     {{/if}}
                 {{/each}}
             </tr>
