@@ -56,24 +56,28 @@ printTable(TEMPLATE,DATA,PAPER,ORIENTATION)
 ```javascript
 const DATA = {
     columns: [
-        { 
-            content: "text",
-            align: "center",
-            valign: "top",
-            width: "200px",
-            colspan: 2,
-            style: "color:red"
-        }
+        [
+            { 
+                content: "text",
+                align: "center",
+                valign: "top",
+                width: "200px",
+                colspan: 2,
+                style: "color:red"
+            }
+        ]
     ],
     datasource: [
-        { 
-            content: "...",
-            align: "...",
-            valign: "...",
-            width: "...",
-            colspan: "...",
-            style: "..."
-        }
+        [
+            { 
+                content: "...",
+                align: "...",
+                valign: "...",
+                width: "...",
+                colspan: "...",
+                style: "..."
+            }
+        ]
     ]
 }
 
