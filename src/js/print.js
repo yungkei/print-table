@@ -13,7 +13,7 @@ const Print = {
 
         const styles = document.head.getElementsByClassName("yk-print-style") || [];
         for (const style of styles) {
-            orderTag.contentDocument.head.appendChild(style);
+            orderTag.contentDocument.head.appendChild(style.cloneNode(true));
         }
 
         orderTag.contentWindow.focus();
