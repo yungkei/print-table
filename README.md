@@ -153,6 +153,16 @@ printTable('basic',
 )
 ```
 
+## Version
+### v1.0.3
+Fix: css style disappear on print  at the second time.
+
+### v1.0.2
+Add: element attributes support.
+
+### v1.0.1
+First print-table.js release.
+
 ## License
 
 print-table.js is available under the [MIT license].
