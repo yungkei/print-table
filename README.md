@@ -155,7 +155,7 @@ printTable('basic',
 
 ## Version
 ### v1.0.3
-Fix: css style disappear on print  at the second time.
+Fix: css style disappear on print at the second time.
 
 ### v1.0.2
 Add: element attributes support.
